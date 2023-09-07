@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Handok Smart Locker Room || login</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/mobile.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap" class="login">
+        <!-- container -->
+        <div id="container">
+            <div class="inner">
+                <div class="login_box">
+                    <div class="box_inner">
+
+                        <div class="box_hd">
+                            <h1 class="tit"><a href="#none"><img src="../../resources/images/common/logo.png" alt="handok||한독"></a></h1>
+                            <h2 class="subtit">Smart Locker Room</h2>
+                        </div>
+
+                        <div class="box_bd">
+                            <div class="inp_item inp_user_nation">
+                                <div class="inp_tit"><span class="kr_txt">국적</span><span class="en_txt">(Nationality)</span></div>
+                                <div class="inp_box row2 tab_doc">
+                                    <div class="cus_inp_box radio_inp">
+                                        <label for="national_chk1" class="label_box">
+                                            <input type="radio" id="national_chk1" name="nationality" class="tab_doc_t" checked="checked">
+                                            <span class="inp_label">내국인(Korean)</span>
+                                            <span class="inp_custom"></span>
+                                        </label>
+                                    </div>
+                
+                                    <div class="cus_inp_box radio_inp">
+                                        <label for="national_chk2" class="label_box">
+                                            <input type="radio" id="national_chk2" class="tab_doc_t" name="nationality">
+                                            <span class="inp_label">외국인(foreigner)</span>
+                                            <span class="inp_custom"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inp_item inp_user_name">
+                                <div class="inp_tit"><span class="kr_txt">이름</span><span class="en_txt">(First Name)</span></div>
+                                <div class="inp_box">
+                                    <input type="text" name="" id="">
+                                </div>
+                            </div>
+        
+                            <div class="inp_item inp_user_ph national_box s_national_chk1">
+                                <div class="inp_tit"><span class="kr_txt">핸드폰번호</span><span class="en_txt">(Phone Number)</span></div>
+                                <div class="inp_box">
+                                    <input type="tel" name="" id="" maxlength="11">
+                                </div>
+                            </div>
+
+                            <div class="inp_item inp_user_ph ty_fore national_box s_national_chk2">
+                                <div class="inp_tit"><span class="kr_txt">핸드폰번호</span><span class="en_txt">(Phone Number)</span></div>
+                                <div class="inp_box row2">
+                                    <div class="cus_inp select_inp">
+                                        <div class="select_box">
+                                            <div class="select_btn">+1</div>
+                                            <div class="select_dropbox">
+                                                <ul class="select_list">
+                                                    <li class="select_item"><div class="item_name"><span class="item_code">+1</span>Canada</div></li>
+                                                    <li class="select_item"><div class="item_name"><span class="item_code">+2</span>United States</div></li>
+                                                    <li class="select_item"><div class="item_name"><span class="item_code">+62</span>Indonesia</div></li>
+                                                    <li class="select_item"><div class="item_name"><span class="item_code">+63</span>Pillippines</div></li>
+                                                    <li class="select_item"><div class="item_name"><span class="item_code">+81</span>Japan</div></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inp_box">
+                                        <input type="tel" name="" id="" maxlength="11">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn_box"><div class="btn btn_confirm" onclick="openPopup('lyCerti')">confirm</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+
+        <div id="lyCerti" class="ly_pop type2 certi_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">인증번호 확인</div>
+                        <div class="subtit">(Check Certification Number)</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyCerti')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="inp_item inp_certi">
+                                <div class="inp_box">
+                                    <input type="text" name="" id="">
+                                    <span id="certiTimer" class="certi_timer"></span>
+                                </div>
+                            </div>
+                            <div class="btn_box"><div class="btn btn_resend">Re-Send</div><div class="btn btn_chk">Check</div></div>
+                        </div>
+                        <div class="bd_cont">
+                            <div class="txt_box kr">
+                                <p><span class="user_name">XXX</span>님의 핸드폰번호 +82 010-1234-5678 번으로 인증번호가 발송되었습니다.</p>
+                                <p>제한시간내 숫자 4자리를 입력해주세요.</p>
+                            </div>
+                            <div class="txt_box en">
+                                <p>(A verification number has been sent to <span class="user_name">XXX</span>'s mobile phone number <span class="user_ph">+82 010-1234-5678.</span></p>
+                                <p>Please enter 4 digits within the time limit.)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ly_dim" onclick="closePopupOnDimClick()"></div>
+    </div>
+
+    <script>
+        function tabDoc(){
+            $('.national_box').hide();
+            $.each($('.tab_doc').find('.tab_doc_t'), function(index, data){
+                var name = $('.tab_doc').find('.tab_doc_t').eq(index).attr('id');
+                if($('.tab_doc').find('.tab_doc_t').eq(index).attr('checked')){
+                    $('.s_'+name).show();
+                }
+            })
+        }
+
+        $(document).ready(function() {
+            tabDoc()
+            // 라디오 버튼 클릭 이벤트 설정
+            $("input[name='nationality']").change(function() {
+                var name = $(this).attr('id');
+                var target_name = $("#"+name);
+                var target_box_name = $(".s_"+name);
+                $('.national_box').hide();
+                if (target_name.prop("checked")) {
+                    target_box_name.show();
+                }
+            });
+
+            var timer = null;
+            var isRunning = false;
+
+            $(".btn_confirm").on("click", function () {
+                var display = $("#certiTimer"); //타이머 대상
+                var leftSec = 180; // 유효시간
+
+                // 버튼 클릭 시 시간 연장
+                if (isRunning) {
+                    clearInterval(timer);
+                    display.html("");
+                    startTimer(leftSec, display);
+                } else {
+                    startTimer(leftSec, display);
+                }
+            });
+
+            function startTimer(count, display) {
+                var minutes, seconds;
+                timer = setInterval(function () {
+                    minutes = parseInt(count / 60, 10);
+                    seconds = parseInt(count % 60, 10);
+
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                    display.html(minutes + ":" + seconds);
+
+                    // 타이머 끝
+                    if (--count < 0) {
+                        clearInterval(timer);
+                        isRunning = false;
+                    }
+                }, 1000);
+                isRunning = true;
+            }
+        });
+    </script>
+    <!-- //wrap -->
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Handok Smart Locker Room || approval</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/mobile.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <header id="header">
+            <div class="hd_inner">
+                <div class="info_tit">
+                    <div class="tit">승인 대기 현황</div>
+                    <div class="subtit">Status waiting approval</div>
+                </div>
+                <h1 class="logo"><a href="#none" class="logo_img"><img src="../../resources/images/common/logo.png" alt=""></a></h1>
+            </div>
+        </header>
+        <!-- container -->
+        <div id="container">
+            <div class="inner">
+                
+
+                <div class="approval_box">
+                    <div class="box_inner">
+                        <div class="tab_box a_tab_doc">
+                            <ul class="tab_list">
+                                <li id="tab_doc1" class="tab_item active tab_doc_t"><a href="#none">외부 방문객</a></li>
+                                <li id="tab_doc2" class="tab_item tab_doc_t"><a href="#none">내부 직원</a></li>
+                            </ul>
+                        </div>
+                        <div class="list_box a_tab_box s_tab_doc1">
+                            <ul class="member_list">
+                                <li class="member_item" onclick="openPopup('memberInfo')">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name"><span class="name_sta">김소현</span></div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn approval">승인</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name">
+                                                <span class="name_sta">김소현</span>
+                                                <span class="info_team">(<span class="team_sta">공정거래관리팀</span>)</span>
+                                            </div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn refuse">거절</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name"><span class="name_sta">김소현</span></div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn wait">대기</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name">
+                                                <span class="name_sta">김소현</span>
+                                                <span class="info_team">(<span class="team_sta">공정거래관리팀</span>)</span>
+                                            </div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn wait">대기</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name"><span class="name_sta">김소현</span></div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn wait">대기</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name">
+                                                <span class="name_sta">김소현</span>
+                                                <span class="info_team">(<span class="team_sta">공정거래관리팀</span>)</span>
+                                            </div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn wait">대기</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name"><span class="name_sta">김소현</span></div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn wait">대기</div></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="list_box a_tab_box s_tab_doc2">
+                            <ul class="member_list">
+                                <li class="member_item" onclick="openPopup('memberInfo')">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name"><span class="name_sta">김소현22</span></div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn approval">승인</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name">
+                                                <span class="name_sta">김소현</span>
+                                                <span class="info_team">(<span class="team_sta">공정거래관리팀</span>)</span>
+                                            </div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn refuse">거절</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name"><span class="name_sta">김소현</span></div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn wait">대기</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name">
+                                                <span class="name_sta">김소현</span>
+                                                <span class="info_team">(<span class="team_sta">공정거래관리팀</span>)</span>
+                                            </div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn wait">대기</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name"><span class="name_sta">김소현</span></div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn wait">대기</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name">
+                                                <span class="name_sta">김소현</span>
+                                                <span class="info_team">(<span class="team_sta">공정거래관리팀</span>)</span>
+                                            </div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn wait">대기</div></div>
+                                    </div>
+                                </li>
+
+                                <li class="member_item">
+                                    <div class="item_inner">
+                                        <div class="item_info">
+                                            <div class="info_name"><span class="name_sta">김소현</span></div>
+                                            <div class="info_date"><span class="date_name">승인요청일시 :</span><span class="date_sta">23-08-21 14:33</span></div>
+                                        </div>
+                                        <div class="btn_box"><div class="btn wait">대기</div></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <div class="btn_top" style="display:none"><i class="icon icon_top"></i></div>
+        <div class="fixed_bot">
+            <div class="btn_box">
+                <div class="btn btn_certi"><i class="icon icon_qr_certi"></i><span class="btn_txt">QR인증하기</span></div>
+                <div class="btn btn_logout"><i class="icon icon_logout"></i><span class="btn_txt">로그아웃</span></div>
+            </div>
+        </div>
+
+        <div id="memberInfo" class="ly_pop ly_member_info">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">승인여부 결정</div>
+                        <div class="ly_close_btn" onclick="closePopup('memberInfo')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="regi_box type_ly">
+
+                                <div class="inp_item readonly">
+                                    <div class="inp_tit"><span class="kr_txt">이름</span></div>
+                                    <div class="inp_box">
+                                        <input type="text" name="" id="" readonly value="홍길동">
+                                    </div>
+                                </div>
+                                
+                                <div class="inp_item readonly">
+                                    <div class="inp_tit"><span class="kr_txt">핸드폰</span></div>
+                                    <div class="inp_box">
+                                        <input type="tel" name="" id="" readonly value="010-1234-5678">
+                                    </div>
+                                </div>
+
+                                <div class="inp_item">
+                                    <div class="inp_tit"><span class="kr_txt">구분</span></div>
+                                    <div class="inp_box radio_box disabled">
+                                        <div class="cus_inp_box radio_inp">
+                                            <label for="national_chk1" class="label_box">
+                                                <input type="radio" id="national_chk1" name="nationality" disabled checked>
+                                                <span class="inp_label">내국인</span>
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                    
+                                        <div class="cus_inp_box radio_inp">
+                                            <label for="national_chk2" class="label_box">
+                                                <input type="radio" id="national_chk2" name="nationality" disabled>
+                                                <span class="inp_label">외국인</span>
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="line_box">
+
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">방문 장소</span></div>
+                                        <div class="inp_box radio_box disabled">
+                                            <div class="cus_inp_box radio_inp">
+                                                <label for="visit_chk1" class="label_box">
+                                                    <input type="radio" id="visit_chk1" name="visit_sta" disabled>
+                                                    <span class="inp_label">중앙</span>
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                            </div>
+                                            <div class="cus_inp_box radio_inp">
+                                                <label for="visit_chk2" class="label_box">
+                                                    <input type="radio" id="visit_chk2" name="visit_sta" disabled checked>
+                                                    <span class="inp_label">1층</span>
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                            </div>
+                                            <div class="cus_inp_box radio_inp">
+                                                <label for="visit_chk3" class="label_box">
+                                                    <input type="radio" id="visit_chk3" name="visit_sta" disabled>
+                                                    <span class="inp_label">2층</span>
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">방문 목적</span></div>
+                                        <div class="inp_box radio_box disabled">
+                                            <div class="cus_inp_box radio_inp">
+                                                <label for="purpose_chk1" class="label_box">
+                                                    <input type="radio" id="purpose_chk1" name="purpose_sta" disabled>
+                                                    <span class="inp_label">중앙</span>
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                            </div>
+                                            <div class="cus_inp_box radio_inp">
+                                                <label for="purpose_chk2" class="label_box">
+                                                    <input type="radio" id="purpose_chk2" name="purpose_sta" disabled>
+                                                    <span class="inp_label">1층</span>
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                            </div>
+                                            <div class="cus_inp_box radio_inp">
+                                                <label for="purpose_chk3" class="label_box">
+                                                    <input type="radio" id="purpose_chk3" name="purpose_sta" disabled checked>
+                                                    <span class="inp_label">2층</span>
+                                                    <span class="inp_custom"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="line_box">
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">체류 기간</span></div>
+                                        <div class="inp_box">
+                                            <div class="date_inp">
+                                                <span class="date_sta">9/12/2023</span>
+                                                <span>~</span>
+                                                <span class="date_sta">9/19/2023</span>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">담당자</span></div>
+                                        <div class="inp_box">
+                                            <div class="box_item manager_sta">김김김</div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">요청일시</span></div>
+                                        <div class="inp_box">
+                                            <div class="box_item request_date">2023-08-21 14:33</div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">승인담당</span></div>
+                                        <div class="inp_box">
+                                            <div class="box_item row_2">
+                                                <div class="apvl_mgr main"><span class="tit">정 :</span><span class="main_sta">김김김</span></div>
+                                                <div class="apvl_mgr sub"><span class="tit">부 :</span><span class="sub_sta">김사나</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="inp_item align_top">
+                                        <div class="inp_tit"><span class="kr_txt">승인여부</span></div>
+                                        <div class="inp_box">
+                                            <div class="radio_box">
+                                                <div class="cus_inp_box radio_inp">
+                                                    <label for="approval_chk1" class="label_box">
+                                                        <input type="radio" id="approval_chk1" name="approval_sta">
+                                                        <span class="inp_label">중앙</span>
+                                                        <span class="inp_custom"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="cus_inp_box radio_inp">
+                                                    <label for="approval_chk2" class="label_box">
+                                                        <input type="radio" id="approval_chk2" name="approval_sta">
+                                                        <span class="inp_label">1층</span>
+                                                        <span class="inp_custom"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="cus_inp_box radio_inp">
+                                                    <label for="approval_chk3" class="label_box">
+                                                        <input type="radio" id="approval_chk3" name="approval_sta">
+                                                        <span class="inp_label">2층</span>
+                                                        <span class="inp_custom"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="text_inp">
+                                                <textarea name="" id="" placeholder="거절사유 입력"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="btn_box">
+                                    <div class="btn btn_save">저장</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ly_dim" onclick="closePopupOnDimClick()"></div>
+
+    </div>
+    <!-- //wrap -->
+
+
+    <script>
+        function a_tabDoc(){
+            $('.a_tab_box').hide();
+            $.each($('.a_tab_doc').find('.tab_doc_t'), function(index, data){
+                var name = $('.a_tab_doc').find('.tab_doc_t').eq(index).attr('id');
+                if($('.a_tab_doc').find('.tab_doc_t').eq(index).hasClass('active')){
+                    $('.s_'+name).show();
+                }
+            })
+        }
+
+        $(document).ready(function() {
+            a_tabDoc()
+            // 라디오 버튼 클릭 이벤트 설정
+            $(".tab_item").click(function() {
+                $('.tab_item').removeClass('active');
+                $('.a_tab_box').hide();
+                var name = $(this).attr('id');
+                $(this).addClass('active');
+                $('.s_'+name).show();
+            });
+
+            $(".btn_top").hide();
+
+            // 사용자가 페이지를 스크롤할 때마다 실행될 함수를 정의합니다.
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 10) {
+                    // 스크롤 값이 10보다 크면 버튼을 보이게 합니다.
+                    $(".btn_top").fadeIn();
+                } else {
+                    // 스크롤 값이 10 이하면 버튼을 숨깁니다.
+                    $(".btn_top").fadeOut();
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>

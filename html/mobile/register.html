@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Handok Smart Locker Room || register</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/mobile.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+    <!-- datepicker -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- //datepicker -->
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <header id="header">
+            <div class="hd_inner">
+                <div class="info_tit">
+                    <div class="tit">정보입력</div>
+                    <div class="subtit">Register your information</div>
+                </div>
+                <h1 class="logo"><a href="#none" class="logo_img"><img src="../../resources/images/common/logo.png" alt=""></a></h1>
+            </div>
+        </header>
+        <!-- container -->
+        <div id="container">
+            <div class="inner">
+                <div class="regi_box">
+                    <div class="box_inner">
+
+                        <div class="inp_item required readonly">
+                            <div class="inp_tit"><span class="compulsory">*</span><span class="kr_txt">이름</span><span class="en_txt">(First Name)</span></div>
+                            <div class="inp_box">
+                                <input type="text" name="" id="" readonly value="홍길동">
+                            </div>
+                        </div>
+                        
+                        <div class="inp_item required readonly">
+                            <div class="inp_tit"><span class="compulsory">*</span><span class="kr_txt">핸드폰번호</span><span class="en_txt">(Phone Number)</span></div>
+                            <div class="inp_box">
+                                <input type="tel" name="" id="" readonly value="010-1234-5678">
+                            </div>
+                        </div>
+
+                        <div class="inp_item required">
+                            <div class="inp_tit"><span class="compulsory">*</span><span class="kr_txt">소속</span><span class="en_txt">(Company)</span></div>
+                            <div class="inp_box">
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+
+                        <div class="inp_item required">
+                            <div class="inp_tit"><span class="compulsory">*</span><span class="kr_txt">방문 장소</span><span class="en_txt">(Locker room to visit)</span></div>
+                            <div class="inp_box radio_box">
+                                <div class="cus_inp_box radio_inp">
+                                    <label for="visit_chk1" class="label_box">
+                                        <input type="radio" id="visit_chk1" name="visit_sta">
+                                        <span class="inp_label">생산1(제재1팀) (MD1)</span>
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <div class="cus_inp_box radio_inp">
+                                    <label for="visit_chk2" class="label_box">
+                                        <input type="radio" id="visit_chk2" name="visit_sta">
+                                        <span class="inp_label">생산2(제재2팀) (MD2)</span>
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <div class="cus_inp_box radio_inp">
+                                    <label for="visit_chk3" class="label_box">
+                                        <input type="radio" id="visit_chk3" name="visit_sta">
+                                        <span class="inp_label">생산3(플러스타팀?) (MD3)</span>
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <div class="cus_inp_box radio_inp">
+                                    <label for="visit_chk4" class="label_box">
+                                        <input type="radio" id="visit_chk4" name="visit_sta">
+                                        <span class="inp_label">QC (QC)</span>
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inp_item required">
+                            <div class="inp_tit"><span class="compulsory">*</span><span class="kr_txt">방문 목적</span><span class="en_txt">(Purpose)</span></div>
+                            <div class="inp_box radio_box">
+                                <div class="cus_inp_box radio_inp">
+                                    <label for="purpose_chk1" class="label_box">
+                                        <input type="radio" id="purpose_chk1" name="purpose_sta">
+                                        <span class="inp_label">시설장비유지보수 (Facility Maintenance)</span>
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <div class="cus_inp_box radio_inp">
+                                    <label for="purpose_chk2" class="label_box">
+                                        <input type="radio" id="purpose_chk2" name="purpose_sta">
+                                        <span class="inp_label">감사(Audit)</span>
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <div class="cus_inp_box radio_inp">
+                                    <label for="purpose_chk3" class="label_box">
+                                        <input type="radio" id="purpose_chk3" name="purpose_sta">
+                                        <span class="inp_label">기타-단순방문 등 (etc)</span>
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inp_item required">
+                            <div class="inp_tit"><span class="compulsory">*</span><span class="kr_txt">체류 기간</span><span class="en_txt">(Stay duration)</span></div>
+                            <div class="inp_box">
+                                <div class="date_inp">
+                                    <input type="text" name="" id="datepicker1">
+                                    <span class="">~</span>
+                                    <input type="text" name="" id="datepicker2">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inp_item">
+                            <div class="inp_tit"><span class="kr_txt">한독 담당자</span><span class="en_txt">(HANDOK Confirmer)</span></div>
+                            <div class="inp_box">
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+
+                        <div class="inp_item inp_chk_policy">
+                            <div class="cus_inp_box chk_inp">
+                                <label for="auto_chk" class="label_box">
+                                    <input type="checkbox" id="auto_chk" name="auto_check">
+                                    <span class="inp_label"><a href="#none" class="policy" onclick="openPopup('lyPolicy')">개인정보 처리방침</a>에 동의 합니다.<span>(Agree to the <a href="#none" class="imp" onclick="openPopup('lyPolicyEn')">Privacy Plicy</a>.)</span></span>
+                                    <span class="inp_custom"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="btn_box">
+                            <div class="btn btn_cancle">Cancle</div>
+                            <div class="btn btn_request">Request a Visit</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- //container -->
+
+        <div id="lyPolicy" class="ly_pop policy_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">개인정보처리방침</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyPolicy')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="privacy_policy_txt">
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                                <p>개인정보처리방침</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lyPolicyEn" class="ly_pop policy_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">Privacy Policy</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyPolicyEn')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="privacy_policy_txt">
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                                <p>Privacy Policy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ly_dim" onclick="closePopupOnDimClick()"></div>
+
+    </div>
+    <!-- //wrap -->
+    <script>
+        $(function() {
+            //input을 datepicker로 선언
+            $.datepicker.setDefaults({
+                dateFormat: 'dd/mm/yy',
+                prevText: '이전 달',
+                nextText: '다음 달',
+                monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                showMonthAfterYear: true,
+                yearSuffix: '년'
+            });                
+            
+            //초기값을 오늘 날짜로 설정해줘야 합니다.
+            $(function() {
+                $("#datepicker1, #datepicker2").datepicker();        
+            });      
+        });
+    </script>
+</body>
+</html>

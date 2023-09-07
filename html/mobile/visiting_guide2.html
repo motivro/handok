@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Handok Smart Locker Room || Visiting Guide</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/mobile.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <header id="header">
+            <div class="hd_inner">
+                <div class="info_tit">
+                    <div class="tit">방문 안내</div>
+                    <div class="subtit">Visiting Guide</div>
+                </div>
+                <h1 class="logo"><a href="#none" class="logo_img"><img src="../../resources/images/common/logo.png" alt=""></a></h1>
+            </div>
+        </header>
+        <!-- container -->
+        <div id="container">
+            <div class="inner">
+                <div class="guide_box">
+                    <div class="box_inner">
+                        <div class="guide_txt">
+                            <div class="txt_cont">
+                                <p class="kr_txt">방문을 위해서는 교육을 반드시 들어야 합니다.</p>
+                                <p class="en_txt">(In order to visit, you must listen to the education.)</p>
+                            </div>
+                            <div class="txt_cont">
+                                <p class="kr_txt">교육을 100% 이수한 뒤, 관리자의 승인이 필요합니다.</p>
+                                <p class="en_txt">(After completing 100% of the training, the manager's approval is required)</p>
+                            </div>
+                            <div class="txt_cont">
+                                <p class="kr_txt">승인이 완료되면 방문 가능한 QR코드가 발급되며, 게이트에서 QR코드를 이용하여 입장할 수 있습니다.</p>
+                                <p class="en_txt">(When approval is complete, a QR code that can be visited is issued, and you can enter using the QR code at the gate.)</p>
+                            </div>
+                        </div>
+
+                        <div class="guide_cont">
+                            <!-- 교육이수 현황 -->
+                            <div class="box_cont">
+                                <div class="cont_tit">
+                                    <i class="icon icon_learn"></i>
+                                    <div class="tit"><span class="kr_txt">교육이수현황</span><span class="en_txt">(learning progress rate)</span></div>
+                                </div>
+                                <div class="cont_item">
+                                    <div class="rating_item">
+                                        <div class="progress">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="rate_txt"><span class="rate_sta">100</span>%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 인증코드 -->
+                            <div class="box_cont qr_cont">
+                                <div class="cont_tit">
+                                    <i class="icon icon_qr"></i>
+                                    <div class="tit"><span class="kr_txt">인증코드</span><span class="en_txt">(Qr code)</span></div>
+                                </div>
+                                
+                                <div class="cont_item">
+                                    <div class="notice_box">
+                                        <p class="kr_txt">관리자의 승인을 기다리는 중입니다.<br>잠시만 기다려주세요</p>
+                                        <div class="hr"></div>
+                                        <p class="en_txt">Waiting for administrator's approval.<br>please wait for a moment</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+    <script>
+        $(document).ready(function () {
+            $(".rating_item .progress").each(function (index) {
+                const bar = $(this).find(".bar");
+                const percent = $(this).find(".percent");
+                const rateTxt = $(this).siblings('.rate_txt').children('.rate_sta');
+                var widthValue = rateTxt.text();
+
+                // 'widthValue'에서 '%' 문자를 제거하고 숫자만 가져옵니다.
+                var number = parseInt(widthValue, 10);
+
+                const width = number;
+
+                bar.css("width", "0%");
+                setTimeout(() => {
+                    bar.css("width", width + "%");
+                    percent.text(width.toFixed(0) + "%");
+                }, 500);
+
+                percent.text(width.toFixed(0) + "%");
+            });
+        });
+    </script>
+</body>
+</html>
