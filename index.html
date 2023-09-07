@@ -1,355 +1,353 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-        <title>한독 스마트 갱의실 관리시스템 PAGELIST</title>
-        <link rel="stylesheet" href="./resources/css/reset.css">
-        <style type="text/css">
-            body{padding:20px;position:relative;}
-            *{margin:0;padding:0;font-size:12px;color:#222;line-height:1.5em;font-family:'NotoSansKR';}
-            h1{margin-bottom:20px;font-size:24px;text-align: center;}
-            table{width:100%;border-collapse:collapse;margin: 0 auto;}
-            table th,
-            table td{border:1px solid #ddd;padding:10px;font-size:14px;font-weight:400;word-break: keep-all;vertical-align: middle;}
-            table th{background:#00a66c;color:#fff;padding:10px;font-size:14px;}
-            table td a{color:#00a66c;text-decoration:none;}
-            table td a:hover{text-decoration:underline;}
-            table tbody tr:hover{background-color: #0071bb;}
-            table tbody tr:hover td{color: #fff;}
-            table tbody tr.blank{background-color:#ddd;}
-            table tbody tr.blank td{height:15px;border: 1px solid #fff;}
-            .noteTable{display: table;width: 100%;}
-            .noteTable .date{display: table-cell;color: #e04545;width: 40px;}
-            .noteTable .note{display: table-cell;}
-            .center{text-align: center;}
-            .bg{background: #fff5f5;}
-            ul.float{position:absolute;right:20px;top:20px;}
-            ul.float li{list-style:none;border:1px solid #ccc;padding:2px 5px;display:inline-block;}
-            .end{background:#ea0000;}
-            .end td{color:#fff}
-            .end td a{color:#fff;}
-            .end:hover{background:#ea0000;}
-            .ing{background:#FEF2F2;}
-            .list{text-align:center;padding:0 0 20px;}
-            .list a{text-decoration:none;margin:0 10px;}
-            .list a:hover{text-decoration:underline;}
-        </style>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>한독 스마트 갱의실 관리시스템 PAGELIST</title>
+    <link rel="stylesheet" href="./resources/css/reset.css">
+    <style type="text/css">
+        body{padding:20px;position:relative;}
+        *{margin:0;padding:0;font-size:12px;color:#222;line-height:1.5em;font-family:'NotoSansKR';}
+        h1{margin-bottom:20px;font-size:24px;text-align: center;}
+        table{width:100%;border-collapse:collapse;margin: 0 auto;}
+        table th,
+        table td{border:1px solid #ddd;padding:10px;font-size:14px;font-weight:400;word-break: keep-all;vertical-align: middle;}
+        table th{background:#00a66c;color:#fff;padding:10px;font-size:14px;}
+        table td a{color:#00a66c;text-decoration:none;}
+        table td a:hover{text-decoration:underline;}
+        table tbody tr:hover{background-color: #0071bb;}
+        table tbody tr:hover td{color: #fff;}
+        table tbody tr.blank{background-color:#ddd;}
+        table tbody tr.blank td{height:15px;border: 1px solid #fff;}
+        .noteTable{display: table;width: 100%;}
+        .noteTable .date{display: table-cell;color: #e04545;width: 40px;}
+        .noteTable .note{display: table-cell;}
+        .center{text-align: center;}
+        .bg{background: #fff5f5;}
+        ul.float{position:absolute;right:20px;top:20px;}
+        ul.float li{list-style:none;border:1px solid #ccc;padding:2px 5px;display:inline-block;}
+        .end{background:#ea0000;}
+        .end td{color:#fff}
+        .end td a{color:#fff;}
+        .end:hover{background:#ea0000;}
+        .ing{background:#FEF2F2;}
+        .list{text-align:center;padding:0 0 20px;}
+        .list a{text-decoration:none;margin:0 10px;}
+        .list a:hover{text-decoration:underline;}
+    </style>
+</head>
+<body>
+    <h1>한독 스마트 갱의실 관리시스템 PAGELIST</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Depth 1</th>
+                <th>Depth 2</th>
+                <th>기능설명</th>
+                <th>File</th>
+                <th>pageLink</th>
+                <th>최초작업일</th>
+                <th>수정일</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mobile</td>
+                <td>본인인증(로그인)</td>
+                <td></td>
+                <td>· 이름/핸드폰번호 입력</td>
+                <td>/html/mobile/</td>
+                <td><a target="_blank" href="./html/mobile/login.html">login.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>신상정보입력</td>
+                <td>정보입력</td>
+                <td>· 신상정보 등록/수정<br>· 개인정보처리방침(한,영) 레이어팝업</td>
+                <td>/html/mobile/</td>
+                <td><a target="_blank" href="./html/mobile/register.html">register.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>승인현황</td>
+                <td>승인안내</td>
+                <td>· 승인현황 조회</td>
+                <td>/html/mobile/</td>
+                <td><a target="_blank" href="./html/mobile/visiting_guide.html">visiting_guide.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>· 승인대기</td>
+                <td>/html/mobile/</td>
+                <td><a target="_blank" href="./html/mobile/visiting_guide2.html">visiting_guide2.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>· QR코드 출력</td>
+                <td>/html/mobile/</td>
+                <td><a target="_blank" href="./html/mobile/visiting_guide3.html">visiting_guide3.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>· 사유조회</td>
+                <td>/html/mobile/</td>
+                <td><a target="_blank" href="./html/mobile/visiting_guide4.html">visiting_guide4.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>인증코드</td>
+                <td></td>
+                <td>· 인증코드 확인 / 재발급</td>
+                <td>/html/mobile/</td>
+                <td><a target="_blank" href="#none">.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>관리모드</td>
+                <td>승인대상목록</td>
+                <td></td>
+                <td>/html/mobile/</td>
+                <td><a target="_blank" href="./html/mobile/approval.html">approval.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>승인상세현황</td>
+                <td></td>
+                <td>/html/mobile/</td>
+                <td><a target="_blank" href="#none">.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="blank">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Tablet</td>
+                <td>로그인</td>
+                <td></td>
+                <td>· 갱의실위치, 1/2차여부 선택</td>
+                <td>/html/tablet</td>
+                <td><a target="_blank" href="#none">.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>활동목록</td>
+                <td></td>
+                <td></td>
+                <td>/html/tablet</td>
+                <td><a target="_blank" href="#none">.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>본인확인</td>
+                <td></td>
+                <td></td>
+                <td>/html/tablet</td>
+                <td><a target="_blank" href="#none">.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>청소일지</td>
+                <td>체크리스트</td>
+                <td>· 청소일지등록</td>
+                <td>/html/tablet</td>
+                <td><a target="_blank" href="#none">.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>개인위생점검</td>
+                <td>체크리스트</td>
+                <td></td>
+                <td>/html/tablet</td>
+                <td><a target="_blank" href="#none">.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>갱의복</td>
+                <td>리더기 인증</td>
+                <td>· 갱의복 리더기 인식</td>
+                <td>/html/tablet</td>
+                <td><a target="_blank" href="#none">.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>사유입력</td>
+                <td>· 결과조회 및 사유입력<br>· 갱의복 유효기간 출력</td>
+                <td>/html/tablet</td>
+                <td><a target="_blank" href="#none">.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>로그아웃</td>
+                <td>비밀번호입력</td>
+                <td>· 관리자 비밀번호 입력/검증</td>
+                <td>/html/tablet</td>
+                <td><a target="_blank" href="#none">.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-
-    <body>
-        <h1>한독 스마트 갱의실 관리시스템 PAGELIST</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Depth 1</th>
-                    <th>Depth 2</th>
-                    <th>기능설명</th>
-                    <th>File</th>
-                    <th>pageLink</th>
-                    <th>최초작업일</th>
-                    <th>수정일</th>
-                    <th>비고</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Mobile</td>
-                    <td>본인인증(로그인)</td>
-                    <td></td>
-                    <td>· 이름/핸드폰번호 입력</td>
-                    <td>/html/mobile/</td>
-                    <td><a target="_blank" href="./html/mobile/login.html">login.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>신상정보입력</td>
-                    <td>정보입력</td>
-                    <td>· 신상정보 등록/수정<br>· 개인정보처리방침(한,영) 레이어팝업</td>
-                    <td>/html/mobile/</td>
-                    <td><a target="_blank" href="./html/mobile/register.html">register.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>승인현황</td>
-                    <td>승인안내</td>
-                    <td>· 승인현황 조회</td>
-                    <td>/html/mobile/</td>
-                    <td><a target="_blank" href="./html/mobile/visiting_guide.html">visiting_guide.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>· 승인대기</td>
-                    <td>/html/mobile/</td>
-                    <td><a target="_blank" href="./html/mobile/visiting_guide2.html">visiting_guide2.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>· QR코드 출력</td>
-                    <td>/html/mobile/</td>
-                    <td><a target="_blank" href="./html/mobile/visiting_guide3.html">visiting_guide3.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>· 사유조회</td>
-                    <td>/html/mobile/</td>
-                    <td><a target="_blank" href="./html/mobile/visiting_guide4.html">visiting_guide4.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>인증코드</td>
-                    <td></td>
-                    <td>· 인증코드 확인 / 재발급</td>
-                    <td>/html/mobile/</td>
-                    <td><a target="_blank" href="#none">.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>관리모드</td>
-                    <td>승인대상목록</td>
-                    <td></td>
-                    <td>/html/mobile/</td>
-                    <td><a target="_blank" href="./html/mobile/approval.html">approval.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>승인상세현황</td>
-                    <td></td>
-                    <td>/html/mobile/</td>
-                    <td><a target="_blank" href="#none">.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="blank">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tablet</td>
-                    <td>로그인</td>
-                    <td></td>
-                    <td>· 갱의실위치, 1/2차여부 선택</td>
-                    <td>/html/tablet</td>
-                    <td><a target="_blank" href="#none">.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>활동목록</td>
-                    <td></td>
-                    <td></td>
-                    <td>/html/tablet</td>
-                    <td><a target="_blank" href="#none">.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>본인확인</td>
-                    <td></td>
-                    <td></td>
-                    <td>/html/tablet</td>
-                    <td><a target="_blank" href="#none">.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>청소일지</td>
-                    <td>체크리스트</td>
-                    <td>· 청소일지등록</td>
-                    <td>/html/tablet</td>
-                    <td><a target="_blank" href="#none">.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>개인위생점검</td>
-                    <td>체크리스트</td>
-                    <td></td>
-                    <td>/html/tablet</td>
-                    <td><a target="_blank" href="#none">.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>갱의복</td>
-                    <td>리더기 인증</td>
-                    <td>· 갱의복 리더기 인식</td>
-                    <td>/html/tablet</td>
-                    <td><a target="_blank" href="#none">.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>사유입력</td>
-                    <td>· 결과조회 및 사유입력<br>· 갱의복 유효기간 출력</td>
-                    <td>/html/tablet</td>
-                    <td><a target="_blank" href="#none">.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>로그아웃</td>
-                    <td>비밀번호입력</td>
-                    <td>· 관리자 비밀번호 입력/검증</td>
-                    <td>/html/tablet</td>
-                    <td><a target="_blank" href="#none">.html</a></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td>
-                        <div class="noteTable">
-                            <div class="date"></div>
-                            <div class="note"></div>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <script>
-            var leng = document.querySelectorAll('tbody td a');
-            console.log(leng.length);
-        </script>
-    </body>
+    <script>
+        var leng = document.querySelectorAll('tbody td a');
+        console.log(leng.length);
+    </script>
+</body>
 </html>
