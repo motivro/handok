@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Handok Smart Locker Room || login</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/tablet.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <div class="info_left">
+                    <h1><a href="#none" class="logo"><img src="../../resources/images/common/logo.svg" alt="handok||한독"></a></h1>
+                    <div class="info_box">
+                        <div class="info_tit">Smart Access Management System</div>
+                        <div class="info_room"><span class="room_sta">중앙갱의실(남) 1118호</span></div>
+                    </div>
+                </div>
+                <div class="info_right">
+                    <button type="button" class="btn_util" onclick="openPopup('lyLogout')">
+                        <i class="icon icon_util"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        
+        <!-- container -->
+        <div id="container" class="chk_list">
+            <div class="inner">
+                <div class="cont_box">
+                    <div class="cont_hd">
+                        <div class="cont_tit"><i class="icon icon_tit"></i><span class="tit">일일청소</span></div>
+                    </div>
+                    <div class="cont_bd">
+                        <table class="chk_list_tbl daily">
+                            <colgroup>
+                                <col style="width: auto;">
+                                <col style="width: 70px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><div>체크리스트</div></th>
+                                    <th>
+                                        <div class="tbl_chk_inp">
+                                            <label for="daily_chked_all">
+                                                <input type="checkbox" name="daily_chk_all" id="daily_chked_all">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="chk_list_item">바닥에 쓰레기 등의 오염물질이 없어야 한다.</div></td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="daily_chk_1">
+                                                <input type="checkbox" name="daily_chk" id="daily_chk_1">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="chk_list_item">패드형 밀대로 바닥의 먼지를 제거한다.</div></td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="daily_chk_2">
+                                                <input type="checkbox" name="daily_chk" id="daily_chk_2">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="chk_list_item">물걸레의 물기를 꼭 짠 후 바닥을 닦는다.</div></td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="daily_chk_3">
+                                                <input type="checkbox" name="daily_chk" id="daily_chk_3">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="chk_list_item">옷장 문의 겉 표면은 소독액 A또는 C로 적신 면걸레 등을 이용하여 청소 및 소독을 실시한다.</div></td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="daily_chk_4">
+                                                <input type="checkbox" name="daily_chk" id="daily_chk_4">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="chk_list_item">세면대와 거울, 세면대 옆 벽면은 소독액 A 또는 C로 적신 면결레 등을 이용하여 청소 및 소독을 실시한다.</div></td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="daily_chk_5">
+                                                <input type="checkbox" name="daily_chk" id="daily_chk_5">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="chk_list_item">생산실 내 교육장의 싱크대는 소독액 A 또는 C로 적신 면걸레 등을 이용하여 청소 및 소독을 실시한다.</div></td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="daily_chk_6">
+                                                <input type="checkbox" name="daily_chk" id="daily_chk_6">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="chk_list_item">갱의실 내부의 위생복 보관함은 소독액 A 또는 C로 적신 면걸레 등을 이용하여 청소 및 소독을 실시한다.</div></td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="daily_chk_7">
+                                                <input type="checkbox" name="daily_chk" id="daily_chk_7">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="chk_list_item">갱의실 내부 벽면은 소독액 A 또는 C로 적신 면걸레 등을 이용하여 청소 및 소독을 실시한다.</div></td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="daily_chk_8">
+                                                <input type="checkbox" name="daily_chk" id="daily_chk_8">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><div class="chk_list_item">갱의실 내부의 쓰레기 통은 최소 1일 1회 이상 비운다.</div></td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="daily_chk_9">
+                                                <input type="checkbox" name="daily_chk" id="daily_chk_9">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="cont_box">
+                    <div class="cont_hd">
+                        <div class="cont_tit"><i class="icon icon_tit"></i><span class="tit">월/반기 청소</span></div>
+                    </div>
+                    <div class="cont_bd">
+    
+                        <table class="chk_list_tbl monthly">
+                            <colgroup>
+                                <col style="width: auto;">
+                                <col style="width: 70px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><div>체크리스트</div></th>
+                                    <th>
+                                        <div class="tbl_chk_inp">
+                                            <label for="monthly_chked_all">
+                                                <input type="checkbox" name="monthly_chk_all" id="monthly_chked_all">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="chk_list_item">
+                                            <span class="date_type">[1개월 1회 청소]</span>
+                                            <span class="txt">갱의실 내 옷장 내부와 Shoes box는 소독액 A 또는 C로 적신 면걸레 등을 이용하여 청소 및 소독을 실시한다.</span>
+                                            <span class="date_last">(마지막 청소일시 : <span class="last_sta">2023-05-14</span>)</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="monthly_chk_1">
+                                                <input type="checkbox" name="monthly_chk" id="monthly_chk_1">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="chk_list_item">
+                                            <span class="date_type">[6개월 1회 청소]</span>
+                                            <span class="txt">천장과 벽은 깨끗한 물걸레를 이용하여 청소하며 더러움이 심한 경우 비누와 세제를 이용하여 청소한다.</span>
+                                            <span class="date_last">(마지막 청소일시 : <span class="last_sta">2023-05-14</span>)</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tbl_chk_inp">
+                                            <label for="monthly_chk_2">
+                                                <input type="checkbox" name="monthly_chk" id="monthly_chk_2">
+                                                <span class="inp_custom"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="btn_box"><a href="./certi_code.html" class="btn btn_edit">청소일지 등록</a></div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- btn_back -->
+        <div class="back_btn"><a href="#none"><i class="icon icon_back"></i></a></div>
+        <!-- //btn_back -->
+
+        <!-- layer_popup -->
+        <div id="lyLogout" class="ly_pop logout_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">관리자 확인</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyLogout')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="msg_box"><p>로그아웃은 관리자만 가능합니다.</p></div>
+                            <div class="regi_box type_ly">
+                                <div class="inp_area">
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">ID</span></div>
+                                        <div class="inp_box">
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">Password</span></div>
+                                        <div class="inp_box">
+                                            <input type="password" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_box"><div class="btn btn_logout">확인</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // layer_popup -->
+
+        <!-- dim layer -->
+        <div class="ly_dim" onclick="closePopupOnDimClick()"></div>
+        <!-- // dim layer -->
+
+    </div>
+    <!-- //wrap -->
+    <script>
+        $(document).ready(function() {
+            // monthly_chked_all 체크박스 클릭 이벤트
+            $("#monthly_chked_all").click(function() {
+                var isChecked = $(this).prop("checked");
+                $("input[name='monthly_chk']").prop("checked", isChecked);
+            });
+        
+            // monthly_chk 하위 체크박스 클릭 이벤트
+            $("input[name='monthly_chk']").click(function() {
+                var totalMonthlyChks = $("input[name='monthly_chk']").length;
+                var checkedMonthlyChks = $("input[name='monthly_chk']:checked").length;
+        
+                if (checkedMonthlyChks === totalMonthlyChks) {
+                    $("#monthly_chked_all").prop("checked", true);
+                } else {
+                    $("#monthly_chked_all").prop("checked", false);
+                }
+            });
+
+            // monthly_chked_all 체크박스 클릭 이벤트
+            $("#daily_chked_all").click(function() {
+                var isChecked = $(this).prop("checked");
+                $("input[name='daily_chk']").prop("checked", isChecked);
+            });
+        
+            // monthly_chk 하위 체크박스 클릭 이벤트
+            $("input[name='daily_chk']").click(function() {
+                var totalMonthlyChks = $("input[name='daily_chk']").length;
+                var checkedMonthlyChks = $("input[name='daily_chk']:checked").length;
+        
+                if (checkedMonthlyChks === totalMonthlyChks) {
+                    $("#daily_chked_all").prop("checked", true);
+                } else {
+                    $("#daily_chked_all").prop("checked", false);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

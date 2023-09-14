@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Handok Smart Locker Room || login</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/tablet.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <div class="info_left">
+                    <h1><a href="#none" class="logo"><img src="../../resources/images/common/logo.svg" alt="handok||한독"></a></h1>
+                    <div class="info_box">
+                        <div class="info_tit">Smart Access Management System</div>
+                        <div class="info_room"><span class="room_sta">중앙갱의실(남) 1118호</span></div>
+                    </div>
+                </div>
+                <div class="info_right">
+                    <button type="button" class="btn_util" onclick="openPopup('lyLogout')">
+                        <i class="icon icon_util"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        
+        <!-- container -->
+        <div id="container" class="barcode">
+            <div class="inner">
+                <div class="cont_hd">
+                    <div class="cont_tit"><i class="icon icon_tit"></i><span class="tit">위생복 인식</span></div>
+                </div>
+                <div class="cont_bd">
+                    <div class="barcode_box">
+                        <div class="video_box">
+                            <video id="video" autoplay></video>
+                        </div>
+                        <div class="txt_box">
+                            <div id="result"></div>
+                        </div>
+                        <div class="btn_box">
+                            <button id="toggleButton" class="btn btn_switch">카메라 전환</button>
+                            <div class="btn btn_input_self">수동 입력</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- btn_back -->
+        <div class="back_btn"><a href="#none"><i class="icon icon_back"></i></a></div>
+        <!-- //btn_back -->
+        
+        <!-- layer_popup -->
+        <div id="lyLogout" class="ly_pop logout_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">관리자 확인</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyLogout')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="msg_box"><p>로그아웃은 관리자만 가능합니다.</p></div>
+                            <div class="regi_box type_ly">
+                                <div class="inp_area">
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">ID</span></div>
+                                        <div class="inp_box">
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">Password</span></div>
+                                        <div class="inp_box">
+                                            <input type="password" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_box"><div class="btn btn_logout">확인</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // layer_popup -->
+
+        <!-- dim layer -->
+        <div class="ly_dim" onclick="closePopupOnDimClick()"></div>
+        <!-- // dim layer -->
+    </div>
+    <!-- //wrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.17.1"></script>
+    <script>
+        var videoElement = document.getElementById('video');
+        var toggleButton = document.getElementById('toggleButton');
+        var isUsingFrontCamera = true;
+        var codeReader;
+        var isDecoding = true;
+        var resultElement = document.getElementById('result');
+        var stream;
+
+        // 카메라 전환 버튼 클릭 이벤트 핸들러
+        toggleButton.addEventListener('click', function () {
+            isUsingFrontCamera = !isUsingFrontCamera;
+            setupCamera();
+        });
+
+        // 웹캠 스트림 가져오기
+        function setupCamera() {
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+            }
+
+            var constraints = {
+                video: {
+                    facingMode: isUsingFrontCamera ? 'user' : 'environment'
+                }
+            };
+
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then(function (newStream) {
+                    stream = newStream;
+                    videoElement.srcObject = stream;
+                    initializeBarcodeReader();
+                })
+                .catch(function (error) {
+                    console.error('웹캠 접근 중 오류 발생:', error);
+                });
+        }
+
+        // 바코드 인식 초기화
+        function initializeBarcodeReader() {
+            if (codeReader) {
+                codeReader.reset();
+            } else {
+                codeReader = new ZXing.BrowserBarcodeReader();
+            }
+
+            scanBarcode();
+        }
+
+        // 바코드 인식
+        function scanBarcode() {
+            codeReader.decodeOnceFromVideoDevice(undefined, 'video')
+                .then(function (result) {
+                    if (isDecoding) {
+                        isDecoding = false;
+                        resultElement.textContent = result.text;
+                    }
+                })
+                .catch(function (error) {
+                    console.error('바코드 인식 중 오류 발생:', error);
+                    scanBarcode();
+                });
+        }
+
+        // 초기 카메라 설정
+        setupCamera();
+    </script>
+</body>
+</html>

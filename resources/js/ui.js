@@ -19,14 +19,12 @@ setScreenSize = () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     
     if(hd.length !== 0){
-        console.log(111,hd.length !== 0)
         let hdHeight = $('#header').outerHeight();
         let contHeight = window.innerHeight - hdHeight;
 
         document.documentElement.style.setProperty('--hdHeight', `${hdHeight}px`);
         document.documentElement.style.setProperty('--contHeight', `${contHeight}px`);
     }else{
-        console.log(222, hd.length !== 0)
         let contHeight = window.innerHeight;
         document.documentElement.style.setProperty('--contHeight', `${contHeight}px`);
     }

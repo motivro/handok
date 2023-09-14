@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Handok Smart Locker Room || login</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/tablet.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <div class="info_left">
+                    <h1><a href="#none" class="logo"><img src="../../resources/images/common/logo.svg" alt="handok||한독"></a></h1>
+                    <div class="info_box">
+                        <div class="info_tit">Smart Access Management System</div>
+                        <div class="info_room"><span class="room_sta">중앙갱의실(남) 1118호</span></div>
+                    </div>
+                </div>
+                <div class="info_right">
+                    <button type="button" class="btn_util" onclick="openPopup('lyLogout')">
+                        <i class="icon icon_util"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        
+        <!-- container -->
+        <div id="container" class="log_cont">
+            <div class="inner">
+                <div class="log_box">
+                    <ul class="log_list row2">
+                        <li class="log_item first">
+                            <a href="#none">
+                                <div class="icon_box"><i class="icon icon_disposal"></i></div>
+                                <div class="item_desc">
+                                    <div class="desc_tit">위생복 폐기</div>
+                                    <div class="desc_subtit">Sanitary clothes disposal</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="log_item last">
+                            <a href="#none">
+                                <div class="icon_box"><i class="icon icon_cleaning"></i></div>
+                                <div class="item_desc">
+                                    <div class="desc_tit">청소 일지 등록</div>
+                                    <div class="desc_subtit">Register cleaning log</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- layer_popup -->
+        <div id="lyLogout" class="ly_pop logout_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">관리자 확인</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyLogout')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="msg_box"><p>로그아웃은 관리자만 가능합니다.</p></div>
+                            <div class="regi_box type_ly">
+                                <div class="inp_area">
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">ID</span></div>
+                                        <div class="inp_box">
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">Password</span></div>
+                                        <div class="inp_box">
+                                            <input type="password" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_box"><div class="btn btn_logout">확인</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // layer_popup -->
+        
+        <!-- dim layer -->
+        <div class="ly_dim" onclick="closePopupOnDimClick()"></div>
+        <!-- // dim layer -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

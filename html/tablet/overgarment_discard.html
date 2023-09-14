@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Handok Smart Locker Room || login</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/tablet.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <div class="info_left">
+                    <h1><a href="#none" class="logo"><img src="../../resources/images/common/logo.svg" alt="handok||한독"></a></h1>
+                    <div class="info_box">
+                        <div class="info_tit">Smart Access Management System</div>
+                        <div class="info_room"><span class="room_sta">중앙갱의실(남) 1118호</span></div>
+                    </div>
+                </div>
+                <div class="info_right">
+                    <button type="button" class="btn_util" onclick="openPopup('lyLogout')">
+                        <i class="icon icon_util"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        
+        <!-- container -->
+        <div id="container" class="uniform">
+            <div class="inner">
+                <div class="cont_hd">
+                    <div class="cont_tit"><i class="icon icon_tit"></i><span class="tit">위생복 폐기</span></div>
+                    <div class="cont_msg">
+                        <div class="msg_box">
+                            <p class="msg">해당 위생복(<span class="code_sta">1231313131313</span>)의 폐기사유를 선택해주세요.</p>
+                        </div>
+                        <p class="noti_txt">※ 위생복 유효기간 : <span class="expiry_sta">2023년 3월 25일</span></p>
+                    </div>
+                </div>
+                <div class="cont_bd">
+                    <div class="reason_box">
+                        <ul class="reason_list">
+                            <li class="reason_item">
+                                <div class="item_inner">
+                                    <div class="item_icon"><i class="icon icon_expiry"></i></div>
+                                    <div class="item_tit">
+                                        <span class="tit">유효기간 지남</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reason_item">
+                                <div class="item_inner">
+                                    <div class="item_icon"><i class="icon icon_damaged"></i></div>
+                                    <div class="item_tit">
+                                        <span class="tit">손상</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reason_item">
+                                <div class="item_inner">
+                                    <div class="item_icon"><i class="icon icon_polluted"></i></div>
+                                    <div class="item_tit">
+                                        <span class="tit">오염</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reason_item" onclick="openPopup('lyReason')">
+                                <div class="item_inner">
+                                    <div class="item_icon"><i class="icon icon_etc"></i></div>
+                                    <div class="item_tit">
+                                        <span class="tit">기타</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="noti_txt"><p>사유선택이 완료되었으면 위생복을 <span class="strong">폐기함</span>에 넣어주시고<br><span class="strong">폐기완료</span> 버튼을 눌러주세요.</p></div>
+                        <div class="btn_box">
+                            <div class="btn btn_retry">다시 인식하기</div>
+                            <div class="btn btn_complete">폐기완료</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- btn_back -->
+        <div class="back_btn"><a href="#none"><i class="icon icon_back"></i></a></div>
+        <!-- //btn_back -->
+
+        <!-- layer_popup -->
+        <div id="lyLogout" class="ly_pop logout_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">관리자 확인</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyLogout')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="msg_box"><p>로그아웃은 관리자만 가능합니다.</p></div>
+                            <div class="regi_box type_ly">
+                                <div class="inp_area">
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">ID</span></div>
+                                        <div class="inp_box">
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">Password</span></div>
+                                        <div class="inp_box">
+                                            <input type="password" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_box"><div class="btn btn_logout">확인</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lyReason" class="ly_pop reason_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">기타사유 입력</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyReason')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="regi_box type_ly">
+                                <div class="inp_area">
+                                    <div class="inp_item">
+                                        <div class="inp_box">
+                                            <textarea name="" id="" placeholder="사유를 입력해주세요."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_box"><div class="btn btn_confirm">확인</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // layer_popup -->
+
+        <!-- dim layer -->
+        <div class="ly_dim" onclick="closePopupOnDimClick()"></div>
+        <!-- // dim layer -->
+    </div>
+    <!-- //wrap -->
+    <script>
+        $(document).ready(function() {
+            $(".reason_list > .reason_item").click(function() {
+                $("ul li").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>
+</body>
+</html>

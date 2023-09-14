@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Handok Smart Locker Room || login</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/tablet.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <div class="info_left">
+                    <h1><a href="#none" class="logo"><img src="../../resources/images/common/logo.svg" alt="handok||한독"></a></h1>
+                    <div class="info_box">
+                        <div class="info_tit">Smart Access Management System</div>
+                        <div class="info_room"><span class="room_sta">중앙갱의실(남) 1118호</span></div>
+                    </div>
+                </div>
+                <div class="info_right">
+                    <button type="button" class="btn_util" onclick="openPopup('lyLogout')">
+                        <i class="icon icon_util"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        
+        <!-- container -->
+        <div id="container" class="inspect">
+            <div class="inner">
+                <div class="cont_box">
+                    <div class="cont_hd">
+                        <div class="cont_tit"><i class="icon icon_tit"></i><span class="tit">개인위생 점검</span></div>
+                        <div class="cont_msg">
+                            <div class="msg_box">
+                                <p class="msg">작업자는 개인위생점검사항을 확인 후 이상이 없을 경우 아래 항목에 동의합니다.</p>
+                                <p class="msg">이상이 있을 경우 작업일자별 해당란에 간단하게 기록후(예:설사) 제조공정관리책임자에게 구두 보고합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont_bd">
+                        <table class="chk_list_tbl monthly">
+                            <colgroup>
+                                <col style="width: auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr><td><div class="chk_list_item">작업실 내로 개인 치료 목적의 의약품이나 개인 소지품, 음식물, 담배 등을 반입할 수 없다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">작업장내에서는 장신구를 착용할 수 없다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">턱수염이나 구렛나루가 있는 경우 가리개를 착용하여야 한다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">모자 밖으로 머리키락이 빠져나오지 않도록 모자를 써야 하며 모자는 귀를 완전히 덮어야 한다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">감염이나 피부 질환 혹은 상처가 있는 경우 관리자에게 보고하고 반드시 장갑을 착용한다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">발열, 식은땀 등이 감기증상이 있는 경우 관리자에게 즉시 보고한다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">구토, 설사를 동반하는 소화계 질환이 있는 경우 관리자에게 즉시 보고한다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">손톱은 짧고 청결해야 하며 매니큐어 등을 칠해서는 안 된다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">분진가능성이 있는 색조화장을 하여서는 안 된다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">작업장에서는 흡연을 금한다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">심신의 피로나 신상문제가 있을 경우 팀장에게 상담을 요청하여야 한다.</div></td></tr>
+                                <tr><td><div class="chk_list_item">기타 전염성 질환이 있는 경우 즉각 관리자에게 보고한다.</div></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="inp_item">
+                    <div class="inp_box">
+                        <div class="cus_inp_box radio_inp">
+                            <label for="inspect_chk1" class="label_box">
+                                <input type="radio" id="inspect_chk1" name="indiv_inspect">
+                                <span class="inp_label">이상이 없음을 확인하였습니다.</span>
+                                <span class="inp_custom"></span>
+                            </label>
+                        </div>
+                        <div class="cus_inp_box radio_inp">
+                            <label for="inspect_chk2" class="label_box">
+                                <input type="radio" id="inspect_chk2" name="indiv_inspect">
+                                <span class="inp_label">이상이 있습니다.</span>
+                                <span class="inp_custom"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_box"><a href="./certi_code.html" class="btn btn_edit">개인위생 점검 완료</a></div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- btn_back -->
+        <div class="back_btn"><a href="#none"><i class="icon icon_back"></i></a></div>
+        <!-- //btn_back -->
+
+        <!-- layer_popup -->
+        <div id="lyLogout" class="ly_pop logout_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">관리자 확인</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyLogout')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="msg_box"><p>로그아웃은 관리자만 가능합니다.</p></div>
+                            <div class="regi_box type_ly">
+                                <div class="inp_area">
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">ID</span></div>
+                                        <div class="inp_box">
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">Password</span></div>
+                                        <div class="inp_box">
+                                            <input type="password" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_box"><div class="btn btn_logout">확인</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lyReason" class="ly_pop reason_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">이상사유 입력</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyReason')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="regi_box type_ly">
+                                <div class="inp_area">
+                                    <div class="inp_item">
+                                        <div class="inp_box">
+                                            <textarea name="" id="" placeholder="사유를 입력해주세요."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_box"><div class="btn btn_confirm">확인</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // layer_popup -->
+
+        <!-- dim layer -->
+        <div class="ly_dim" onclick="closePopupOnDimClick()"></div>
+        <!-- // dim layer -->
+
+    </div>
+    <!-- //wrap -->
+    <script>
+        $(document).ready(function(){
+            $("#inspect_chk2").change(function() {
+                if ($(this).is(":checked")) {
+                    openPopup('lyReason');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

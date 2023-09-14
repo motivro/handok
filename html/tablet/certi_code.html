@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Handok Smart Locker Room || login</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/tablet.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap" class="certi">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <div class="info_left">
+                    <h1><a href="#none" class="logo"><img src="../../resources/images/common/logo.svg" alt="handok||한독"></a></h1>
+                    <div class="info_box">
+                        <div class="info_tit">Smart Access Management System</div>
+                        <div class="info_room"><span class="room_sta">중앙갱의실(남) 1118호</span></div>
+                    </div>
+                </div>
+                <div class="info_right">
+                    <button type="button" class="btn_util" onclick="openPopup('lyLogout')">
+                        <i class="icon icon_util"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <!-- container -->
+        <div id="container" class="certi_code">
+            <div class="inner">
+                <div class="certi_zone">
+                    <div class="zone_inner">
+                        <div class="certi_tit">인증번호 확인</div>
+                        <div class="pw_box">
+                            <div class="pw_item"><span class="dot"></span></div>
+                            <div class="pw_item"><span class="dot"></span></div>
+                            <div class="pw_item"><span class="dot"></span></div>
+                            <div class="pw_item"><span class="dot"></span></div>
+                        </div>
+                        <div class="certi_msg"><p>인증번호를 잘 모르거나 분실하였을 경우,<br>관리자에게 문의해주세요.</p></div>
+                        <div class="numb_box">
+                            <button type="button" class="number">1</button>
+                            <button type="button" class="number">2</button>
+                            <button type="button" class="number">3</button>
+                            <button type="button" class="number">4</button>
+                            <button type="button" class="number">5</button>
+                            <button type="button" class="number">6</button>
+                            <button type="button" class="number">7</button>
+                            <button type="button" class="number">8</button>
+                            <button type="button" class="number">9</button>
+                            <button type="button" class="number">0</button>
+                            <button type="button" class="del_number"><i class="icon icon_delete"></i></button>
+                            <button type="button" class="confirm_code">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- btn_back -->
+        <div class="back_btn"><a href="#none"><i class="icon icon_back"></i></a></div>
+        <!-- //btn_back -->
+
+        <!-- layer_popup -->
+        <div id="lyLogout" class="ly_pop logout_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">관리자 확인</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyLogout')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="msg_box"><p>로그아웃은 관리자만 가능합니다.</p></div>
+                            <div class="regi_box type_ly">
+                                <div class="inp_area">
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">ID</span></div>
+                                        <div class="inp_box">
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="inp_item">
+                                        <div class="inp_tit"><span class="kr_txt">Password</span></div>
+                                        <div class="inp_box">
+                                            <input type="password" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_box"><div class="btn btn_logout">확인</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="certiErr" class="ly_pop certi_err_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">알림</div>
+                        <div class="ly_close_btn" onclick="closePopup('certiErr')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="msg_box"><p>인증에 <span class="err">실패</span>하셨습니다.</p></div>
+                            <div class="btn_box"><div class="btn btn_logout" onclick="closePopup('certiErr')">확인</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // layer_popup -->
+
+        <!-- dim layer -->
+        <div class="ly_dim" onclick="closePopupOnDimClick()"></div>
+        <!-- // dim layer -->
+    </div>
+    <!-- //wrap -->
+    <script>
+        $(document).ready(function() {
+            var expectedCode = "1234"; // 임의로 생성한 인증번호
+
+            // 사용자가 입력한 코드
+            var codeInput = '';
+
+            // 숫자 버튼 클릭 이벤트
+            $(".number").click(function() {
+                var number = $(this).text();
+                codeInput += number;
+                updateCodeDisplay();
+            });
+
+            // 삭제 버튼 클릭 이벤트
+            $(".del_number").click(function() {
+                codeInput = codeInput.slice(0, -1);
+                updateCodeDisplay();
+            });
+
+            // 확인 버튼 클릭 이벤트
+            $(".confirm_code").click(function() {
+                // 입력된 코드를 기존 인증번호와 비교
+                if (codeInput === expectedCode) {
+                    alert("인증 성공!");
+                    console.log(codeInput)
+                    // 여기에 인증 성공 시 수행할 작업을 추가하세요.
+                } else {
+                    openPopup('certiErr');
+                    console.log(codeInput)
+                    $(".pw_item .dot").removeClass("active");
+                    // 사용자가 입력한 코드 초기화
+                    codeInput = '';
+                }
+            });
+
+            // 입력된 코드를 화면에 업데이트
+            function updateCodeDisplay() {
+                var dots = $(".pw_item .dot");
+                for (var i = 0; i < dots.length; i++) {
+                    if (i < codeInput.length) {
+                        $(dots[i]).addClass("active");
+                    } else {
+                        $(dots[i]).removeClass("active");
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
