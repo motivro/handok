@@ -206,6 +206,7 @@ body{width: 100%;max-width:800px;margin: 0 auto;}
 /* 인증 코드 */
 .guide_box.certi .guide_cont{margin-top: 0;}
 
+/* 230919추가 */
 /* error */
 .error_box{background-image: url('../images/common/login_bg.svg');background-repeat: no-repeat;background-size: cover;background-position: center center;}
 .error_box .box_inner{padding: 60px 20px 40px;}
@@ -224,3 +225,4 @@ body{width: 100%;max-width:800px;margin: 0 auto;}
 
 .error_box .box_bd .btn_box{margin-top: 40px;}
 .error_box .btn_home{background-color: #00AB8F;color: #fff;max-width:320px}
+/* 230919추가 */
