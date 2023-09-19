@@ -205,3 +205,22 @@ body{width: 100%;max-width:800px;margin: 0 auto;}
 
 /* 인증 코드 */
 .guide_box.certi .guide_cont{margin-top: 0;}
+
+/* error */
+.error_box{background-image: url('../images/common/login_bg.svg');background-repeat: no-repeat;background-size: cover;background-position: center center;}
+.error_box .box_inner{padding: 60px 20px 40px;}
+.error_box .box_hd{text-align: center;}
+.error_box .box_hd .logo > a{display: block;width: 100%;max-width: 200px;margin: 0 auto;}
+.error_box .box_hd .logo > a > img{width: 100%;}
+
+.error_box .box_bd .msg_box{text-align: center;}
+.error_box .box_bd .err_img{width:100%;max-width:200px;margin: 40px auto;text-align: center;line-height: 0;}
+.error_box .box_bd .err_img > img{width: 100%;}
+.error_box .box_bd .msg_box .err_tit{font-size: 32px;font-weight: 700;line-height:1;color: #333;}
+.error_box .box_bd .msg_box .err_subtit{margin-top:10px;font-size: 24px;font-weight: 700;line-height:1;color: #666;}
+.error_box .box_bd .msg_box .msg_item{margin-top: 40px;}
+.error_box .box_bd .msg_box .msg_item p{font-size: 16px;font-weight: 500;line-height: 20px;word-break: keep-all;}
+.error_box .box_bd .msg_box .msg_item p + p{margin-top: 5px;}
+
+.error_box .box_bd .btn_box{margin-top: 40px;}
+.error_box .btn_home{background-color: #00AB8F;color: #fff;max-width:320px}
