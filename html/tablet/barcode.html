@@ -48,7 +48,7 @@
                         </div>
                         <div class="btn_box">
                             <button id="toggleButton" class="btn btn_switch">카메라 전환</button>
-                            <div class="btn btn_input_self">수동 입력</div></div>
+                            <div class="btn btn_input_self" onclick="openPopup('lyBarcodeInput')">수동 입력</div></div><!-- 231017 추가 onclick 이벤트 -->
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                 <div class="ly_cont">
                     <div class="ly_hd">
                         <div class="tit">관리자 확인</div>
-                        <div class="ly_close_btn" onclick="closePopup('lyLogout')"><i class="icon icon_close"></i></div>
+                        <div class="ly_close_btn" onclick="closePopup('lyBarcodeInput')"><i class="icon icon_close"></i></div>
                     </div>
                     <div class="ly_bd">
                         <div class="bd_cont">
@@ -93,6 +93,45 @@
                 </div>
             </div>
         </div>
+
+        <!-- 231017 추가 S -->
+        <div id="lyBarcodeInput" class="ly_pop barcodeInput_pop">
+            <div class="ly_inner">
+                <div class="ly_cont">
+                    <div class="ly_hd">
+                        <div class="tit">위생복 바코드 입력(12자리)</div>
+                        <div class="ly_close_btn" onclick="closePopup('lyBarcodeInput')"><i class="icon icon_close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="certi_zone">
+                                <div class="zone_inner">
+                                    <div class="code_box">
+                                        <div class="code_sta"></div>
+                                    </div>
+                                    <div class="numb_box">
+                                        <button type="button" class="number">1</button>
+                                        <button type="button" class="number">2</button>
+                                        <button type="button" class="number">3</button>
+                                        <button type="button" class="number">4</button>
+                                        <button type="button" class="number">5</button>
+                                        <button type="button" class="number">6</button>
+                                        <button type="button" class="number">7</button>
+                                        <button type="button" class="number">8</button>
+                                        <button type="button" class="number">9</button>
+                                        <button type="button" class="number">0</button>
+                                        <button type="button" class="del_number"><i class="icon icon_delete"></i></button>
+                                        <button type="button" class="confirm_code">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 231017 추가 E -->
+
         <!-- // layer_popup -->
 
         <!-- dim layer -->
@@ -167,6 +206,49 @@
 
         // 초기 카메라 설정
         setupCamera();
+
+        // 231017 추가 S
+        $(document).ready(function() {
+            var barcode_sta = '';
+
+            // 숫자 버튼 클릭 이벤트 핸들러
+            $('.barcodeInput_pop .number').on('click', function() {
+                addNumber($(this).text());
+            });
+
+            // 삭제 버튼 클릭 이벤트 핸들러
+            $('.barcodeInput_pop .del_number').on('click', deleteLastDigit);
+            
+
+            // 확인 버튼 클릭 이벤트 핸들러
+            $('.barcodeInput_pop .confirm_code').on('click', confirmCode);
+
+            function addNumber(number) {
+                if (barcode_sta.length < 12) {
+                    barcode_sta += number;
+                    updateCodeView();
+                }
+            }
+            function deleteLastDigit() {
+                if (barcode_sta.length > 0) {
+                    barcode_sta = barcode_sta.slice(0, -1);
+                    updateCodeView();
+                }
+            }
+            function confirmCode() {
+                if (barcode_sta.length !== 12) {
+                    alert('코드는 12자리여야 합니다.');
+                } else {
+                    // 여기에서 코드가 12자리일 때 수행해야 하는 작업을 추가합니다.
+                }
+            }
+            function updateCodeView() {
+                $('.barcodeInput_pop .code_sta').text(barcode_sta);
+            }
+        });
+
+        
+        // 231017 추가 E
     </script>
 </body>
 </html>
